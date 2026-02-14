@@ -125,7 +125,7 @@ console.log(Math.trunc(n4));
 
 // Use Variables b + d To Get This Valus
 console.log((Math.floor(n2)/Math.ceil(n4)).toFixed(2).toString()); // 66.67 => String
-console.log(parseInt((Math.floor(n2)/Math.ceil(n4)).toFixed(0))); // 67 => Number
+console.log(parseInt((Math.floor(n2)/Math.ceil(n4)).toFixed())); // 67 => Number
 // end challenge
 
 // A1
@@ -169,11 +169,19 @@ console.log(Number.isInteger(a5) + Number.isInteger(a5)); // 2
 // A6
 let flt = 10.4;
 
-console.log(+flt.toFixed(0)); // 10
+console.log(+flt.toFixed()); // 10
 console.log(parseInt(flt)); // 10
 console.log(Math.floor(flt)); // 10
 console.log(Math.round(flt)); // 10
 console.log(Math.trunc(flt)); // 10
 
-// A7
+// A7 0.0 - 0.5  0-5   
 console.log((Math.abs((Math.random()-0.5) *10 )).toFixed(0)); // 0 || 1 || 2 || 3 || 4
+
+// 0 , 1  00 ,05
+// 2 , 3  10 , 15    
+//4 , 5  20 25 
+// 6 , 7 30 , 35
+//8 , 9 40 45            
+
+// 0 - 1.0   0.3 * 5 1.5 -> 1 0 - 0.99999999
