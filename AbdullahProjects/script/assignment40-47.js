@@ -29,10 +29,12 @@ let num = 3;
 // Method 1
 myFriends=myFriends.concat(myFriends);
 myFriends.shift()
-console.log(myFriends.slice(num , myFriends.lastIndexOf(myFriends[myFriends])))  // ["Ahmed", "Elham", "Osama"];
+console.log(myFriends)
+console.log(myFriends.slice(num , myFriends.lastIndexOf()))  // ["Ahmed", "Elham", "Osama"];
 
 // Method 2
 myFriends.pop()
+console.log(myFriends)
 console.log(myFriends.slice(num)); // ["Ahmed", "Elham", "Osama"];
 
 
@@ -71,8 +73,8 @@ if (haystack.includes(needle)) {
 if (haystack[1]===needle) {
   console.log("Found")
 }
+console.log(haystack.at(haystack.indexOf(needle)))
 
-console.log()
 if (haystack.at(haystack.indexOf(needle)===needle)) {
   console.log("Found")
 }

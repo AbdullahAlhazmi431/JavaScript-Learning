@@ -28,10 +28,10 @@ let num = 3;
 
 // Method 1
 myFriends.pop();
-console.log(myFriends.slice("", num)); // ["Ahmed", "Elham", "Osama"];
+console.log(myFriends); // ["Ahmed", "Elham", "Osama"];
 
 // Method 2
-console.log(myFriends.splice("", num)); // ["Ahmed", "Elham", "Osama"];
+console.log(myFriends); // ["Ahmed", "Elham", "Osama"];
 
 // A2
 let friends = ["Ahmed", "Eman", "Osama", "Gamal"];
@@ -47,6 +47,7 @@ let arrTwo = ["A", "B", "Z"];
 let finalArr = [];
 
 // Write One Single Line Of Code
+console.log(arrOne.concat(arrTwo))
 finalArr = arrOne.concat(arrTwo).sort().reverse();
 console.log(finalArr); // ["Z", "X", "D", "C", "B", "A"]
 
