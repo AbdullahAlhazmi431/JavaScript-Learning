@@ -11,44 +11,6 @@
   Data Is Not Sorted Output Depend On Data Types
   - Use Ternary Conditional Operator
 */
-function showDetails(a, b, c) {
-  let name1, age1, Available1;
-  name1 =
-    typeof a === "string"
-      ? a
-      : typeof b === "string"
-        ? b
-        : typeof c === "string"
-          ? c
-          : "Unknown";
-
-  age1 =
-    typeof a === "number"
-      ? a
-      : typeof b === "number"
-        ? b
-        : typeof c === "number"
-          ? c
-          : "Unknown";
-
-  Available1 =
-    typeof a === "boolean"
-      ? a
-      : typeof b === "boolean"
-        ? b
-        : typeof c === "boolean"
-          ? c
-          : false;
-
-  let Available2 =
-    Available1 === true ? "Available For Hire" : "Not Available For Hire";
-  return `Hello ${name1}, Your Age Is ${age1}, You Are ${Available2}`;
-}
-
-console.log(showDetails("Osama", 38, true)); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
-console.log(showDetails(38, "Osama", true)); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
-console.log(showDetails(true, 38, "Osama")); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
-console.log(showDetails(false, "Osama", 38)); // "Hello Osama, Your Age Is 38, You Are Not Available For Hire"
 
 // A1
 function sayHello(theName, theGender) {
@@ -94,7 +56,7 @@ function ageInTime(theAge) {
   let minutes = hours * 60;
   let seconds = minutes * 60;
   if (theAge > 10 && theAge < 100) {
-    return `${months} Months | ${weeks} weeks| ${days} days| ${hours} hours| ${minutes} minutes| ${seconds} seconds`;
+    return `${months} Months|\n ${weeks} week|\n ${days} day|\n ${hours} hour|\n ${minutes} minuts|\n ${seconds} seconds\n`;
   } else {
     return `Age Out Of Range`;
   }
@@ -103,3 +65,78 @@ function ageInTime(theAge) {
 // Needed Output
 console.log(ageInTime(110)); // Age Out Of Range
 console.log(ageInTime(38)); // Months Example => 456 Months
+
+// A4
+function showDetails(a, b, c) {
+  let name1, age1, Available1;
+  name1 =
+    typeof a === "string"
+      ? a
+      : typeof b === "string"
+        ? b
+        : typeof c === "string"
+          ? c
+          : "Unknown";
+
+  age1 =
+    typeof a === "number"
+      ? a
+      : typeof b === "number"
+        ? b
+        : typeof c === "number"
+          ? c
+          : "Unknown";
+
+  Available1 =
+    typeof a === "boolean"
+      ? a
+      : typeof b === "boolean"
+        ? b
+        : typeof c === "boolean"
+          ? c
+          : false;
+
+  let Available2 =
+    Available1 === true ? "Available For Hire" : "Not Available For Hire";
+  return `Hello ${name1}, Your Age Is ${age1}, You Are ${Available2}`;
+}
+
+console.log(showDetails("Osama", 38, true)); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+console.log(showDetails(38, "Osama", true)); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+console.log(showDetails(true, 38, "Osama")); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+console.log(showDetails(false, "Osama", 38)); // "Hello Osama, Your Age Is 38, You Are Not Available For Hire"
+
+// A5
+// function createSelectBox(startYear, endYear) {
+//   document.write("<select>");
+//   document.write(
+//     "<option value='" + startYear + "'>" + startYear + "</option>",
+//   );
+
+//   for (let i = startYear; i < endYear; i++) {
+//     startYear = true + i;
+//     document.write(
+//       "<option value='" + startYear + "'>" + startYear + "</option>",
+//     );
+//   }
+
+//   document.write("</select>");
+// }
+
+// createSelectBox(2000, 2021);
+
+// A6
+
+function multiply(a, b, c) {
+  if (typeof a == typeof b && c == undefined) {
+    return a * b;
+  } else if (typeof b == typeof c) {
+    return b * c;
+  } else if (typeof a == typeof b) {
+    return parseInt(a) * b;
+  }
+}
+
+console.log(multiply(10, 20)); // 200
+console.log(multiply("A", 10, 30)); // 300
+console.log(multiply(100.5, 10, "B")); // 1000
